@@ -20,7 +20,7 @@ angular.module('MyApp', ['ngCookies', 'ngResource', 'ngRoute', 'ngMessages', 'mg
         controller: 'SignupCtrl'
       })
       .when('/add', {
-        templateUrl: 'views/add.html'
+        templateUrl: 'views/add.html',
         controller: 'AddCtrl'
       })
       .otherwise({
