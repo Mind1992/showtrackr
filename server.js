@@ -66,3 +66,8 @@ userSchema.methods.comparePassword = function(candidatePassword, cb) {
     cb(null, isMatch);
   });
 };
+
+var User = mongoose.model('User', userSchema);
+var Show = mongoose.model('Show', showSchema);
+
+mongoose.connect('localhost');
