@@ -18,3 +18,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+var showSchema = new mongoose.Schema({
+    _id: Number,
+    name: String,
+    airsDayOfWeek: String,
+    airsTime: String,
+    firstAired: Date,
+    genre: [String],
+    rating: Number,
+    ratingCount: Number,
+    status: String,
+    poster: String,
+    subscribers: [{
+        type: mongoose.Schema.Types.ObjectId, ref: 'User'
+    }],
+    episodes: [{
+        season: Number,
+        episodeNumber: Number,
+        episodeName: String,
+        firstAired: Date,
+        overview: String
+    }]
+});
