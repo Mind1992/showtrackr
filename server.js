@@ -1,3 +1,7 @@
+var csso = require('gulp-csso');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var templateCache = require('gulp-angular-templatecache');
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
