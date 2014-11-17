@@ -21,8 +21,7 @@ var _ = require('lodash');
 var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var agenda = require('agenda')({ db: { address: 'mongodb://Mind92:Golub1971@ds053080.mongolab.com:53080/showtrackr
-' } });
+var agenda = require('agenda')({ db: { address: 'mongodb://sahat:foobar@ds041178.mongolab.com:41178/showtrackrdemo' } });
 var sugar = require('sugar');
 var nodemailer = require('nodemailer');
 
@@ -151,8 +150,7 @@ userSchema.methods.comparePassword = function(candidatePassword, cb) {
 var User = mongoose.model('User', userSchema);
 var Show = mongoose.model('Show', showSchema);
 
-mongoose.connect('mongodb://Mind92:Golub1971@ds053080.mongolab.com:53080/showtrackr
-');
+mongoose.connect('mongodb://sahat:foobar@ds041178.mongolab.com:41178/showtrackrdemo');
 
 app.get('/api/shows', function(req, res, next){
   var query = Show.find();
