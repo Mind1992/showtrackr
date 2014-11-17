@@ -5,6 +5,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
 var templateCache = require('gulp-angular-templatecache');
+var compress = require('compression')
 
 gulp.task('sass', function(){
   gulp.src('public/stylesheets/style.scss')
